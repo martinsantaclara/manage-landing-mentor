@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import BgUpperCorner from '../components/BgUpperCorner/bgUpperCorner';
 import Header from '../components/Header/header';
 import Hero from '../components/Hero/hero';
-// import Reviews from '../components/reviews/reviews';
+import Reviews from '../components/Reviews/reviews';
 import Simplify from '../components/Simplify/simplify';
 
 const useWidth = () => {
@@ -48,7 +48,7 @@ export default function Home({ dark }) {
                     ></Header>
                     <main>
                         <Hero mobile={mobile} widthScreen={width}></Hero>
-                        {/* <Reviews mobile={mobile} widthScreen={width}></Reviews> */}
+                        <Reviews mobile={mobile} widthScreen={width}></Reviews>
                         <Simplify
                             mobile={mobile}
                             widthScreen={width}
