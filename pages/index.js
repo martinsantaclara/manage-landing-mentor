@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import BgUpperCorner from '../components/BgUpperCorner/bgUpperCorner';
 import Header from '../components/Header/header';
 import Hero from '../components/Hero/hero';
+import Reviews from '../components/reviews/reviews';
 
 const useWidth = () => {
     const [width, setWidth] = useState(0);
@@ -46,12 +47,13 @@ export default function Home({ dark }) {
                     ></Header>
                     <main>
                         <Hero mobile={mobile} widthScreen={width}></Hero>
+                        <Reviews mobile={mobile} widthScreen={width}></Reviews>
+
                         {/* <Features
                             mobile={mobile}
                             widthScreen={width}
                             dark={dark}
                         ></Features>
-                        <Reviews mobile={mobile} widthScreen={width}></Reviews>
                         <Simplify
                             mobile={mobile}
                             widthScreen={width}
