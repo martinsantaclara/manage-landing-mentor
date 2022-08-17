@@ -24,7 +24,7 @@ import {
 const Reviews = ({ mobile, widthScreen }) => {
     const [itemIndex, setItemIndex] = useState(1);
     const [count, setCount] = useState(1);
-    const [position, setPosition] = useState(positionCalc(widthScreen));
+    // const [position, setPosition] = useState(positionCalc(widthScreen));
 
     const ItemsReview = [
         {
@@ -81,7 +81,7 @@ const Reviews = ({ mobile, widthScreen }) => {
     // });
 
     return (
-        <ReviewsContainer id="reviews">
+        <ReviewsContainer id="reviewsId">
             <Container
                 mobile={mobile}
                 direction={'column'}
