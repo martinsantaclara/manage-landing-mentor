@@ -16,10 +16,10 @@ import {
     ReviewsTitle,
 } from './reviewsStyles';
 
-const positionCalc = (widthScreen) => {
-    const pos = Math.floor((widthScreen / 2 - 300) / 570);
-    return pos;
-};
+// const positionCalc = (widthScreen) => {
+//     const pos = Math.floor((widthScreen / 2 - 300) / 570);
+//     return pos;
+// };
 
 const Reviews = ({ mobile, widthScreen }) => {
     const [itemIndex, setItemIndex] = useState(1);
