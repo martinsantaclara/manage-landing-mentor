@@ -6,6 +6,7 @@ import Hero from '../components/Hero/hero';
 import Features from '../components/Features/features';
 import Reviews from '../components/Reviews/reviews';
 import Simplify from '../components/Simplify/simplify';
+import Footer from '../components/Footer/footer';
 
 const useWidth = () => {
     const [width, setWidth] = useState(0);
@@ -60,6 +61,7 @@ export default function Home({ dark }) {
                             widthScreen={width}
                         ></Simplify>
                     </main>
+                    <Footer mobile={mobile}></Footer>
                 </>
             )}
         </>
