@@ -16,15 +16,15 @@ import {
     ReviewsTitle,
 } from './reviewsStyles';
 
-// const positionCalc = (widthScreen) => {
-//     const pos = Math.floor((widthScreen / 2 - 300) / 570);
-//     return pos;
-// };
+const positionCalc = (widthScreen) => {
+    const pos = Math.floor((widthScreen / 2 - 300) / 570);
+    return pos;
+};
 
 const Reviews = ({ mobile, widthScreen }) => {
     const [itemIndex, setItemIndex] = useState(1);
     const [count, setCount] = useState(1);
-    // const [position, setPosition] = useState(positionCalc(widthScreen));
+    const [position, setPosition] = useState(positionCalc(widthScreen));
 
     const ItemsReview = [
         {
@@ -53,41 +53,41 @@ const Reviews = ({ mobile, widthScreen }) => {
         },
     ];
 
-    // useEffect(() => {
-    //     if (!mobile) {
-    //         const interval = setInterval(() => {
-    //             let newPosition = position + count;
+    useEffect(() => {
+        if (!mobile) {
+            const interval = setInterval(() => {
+                let newPosition = position + count;
 
-    //             // ancho review de 540
-    //             const left = widthScreen / 2 - 840 - 570 * newPosition;
-    //             const offsetReview = 570 * ItemsReview.length - 30 + left;
+                // ancho review de 540
+                const left = widthScreen / 2 - 840 - 570 * newPosition;
+                const offsetReview = 570 * ItemsReview.length - 30 + left;
 
-    //             // ancho review de 340
-    //             // const left = widthScreen / 2 - 540 - 370 * newPosition;
-    //             // const offsetReview = 370 * ItemsReview.length - 30 + left;
+                // ancho review de 340
+                // const left = widthScreen / 2 - 540 - 370 * newPosition;
+                // const offsetReview = 370 * ItemsReview.length - 30 + left;
 
-    //             if (count === -1 && left > widthScreen) {
-    //                 newPosition = position + 1;
-    //                 setCount(1);
-    //             } else if (count === 1 && offsetReview < 0) {
-    //                 newPosition = position - 1;
-    //                 setCount(-1);
-    //             }
-    //             setPosition(newPosition);
-    //         }, 7500);
+                if (count === -1 && left > widthScreen) {
+                    newPosition = position + 1;
+                    setCount(1);
+                } else if (count === 1 && offsetReview < 0) {
+                    newPosition = position - 1;
+                    setCount(-1);
+                }
+                setPosition(newPosition);
+            }, 7500);
 
-    //         return () => clearInterval(interval);
-    //     }
-    // });
+            return () => clearInterval(interval);
+        }
+    });
 
     return (
-        <ReviewsContainer id="reviewsId">
+        <ReviewsContainer id="reviews">
             <Container
                 mobile={mobile}
                 direction={'column'}
                 width={'100%'}
                 align={''}
-                reviewsParam
+                reviews
             >
                 <BgLeftReviews widthScreen={widthScreen} aria-hidden="true">
                     <Image
@@ -98,7 +98,7 @@ const Reviews = ({ mobile, widthScreen }) => {
                     ></Image>
                 </BgLeftReviews>
                 <ReviewsTitle mobile={mobile}>What they’ve said</ReviewsTitle>
-                {/* <ItemsReviewStyle
+                <ItemsReviewStyle
                     mobile={mobile}
                     widthScreen={widthScreen}
                     position={position}
@@ -138,7 +138,7 @@ const Reviews = ({ mobile, widthScreen }) => {
                             ></ReviewBtn>
                         ))}
                     </ReviewBtns>
-                )} */}
+                )}
                 <Button
                     align={'center'}
                     margin={mobile ? '1.25rem 0' : '3rem 0 0'}
