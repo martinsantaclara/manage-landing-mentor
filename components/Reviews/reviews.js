@@ -53,32 +53,32 @@ const Reviews = ({ mobile, widthScreen }) => {
         },
     ];
 
-    useEffect(() => {
-        if (!mobile) {
-            const interval = setInterval(() => {
-                let newPosition = position + count;
+    // useEffect(() => {
+    //     if (!mobile) {
+    //         const interval = setInterval(() => {
+    //             let newPosition = position + count;
 
-                // ancho review de 540
-                const left = widthScreen / 2 - 840 - 570 * newPosition;
-                const offsetReview = 570 * ItemsReview.length - 30 + left;
+    //             // ancho review de 540
+    //             const left = widthScreen / 2 - 840 - 570 * newPosition;
+    //             const offsetReview = 570 * ItemsReview.length - 30 + left;
 
-                // ancho review de 340
-                // const left = widthScreen / 2 - 540 - 370 * newPosition;
-                // const offsetReview = 370 * ItemsReview.length - 30 + left;
+    //             // ancho review de 340
+    //             // const left = widthScreen / 2 - 540 - 370 * newPosition;
+    //             // const offsetReview = 370 * ItemsReview.length - 30 + left;
 
-                if (count === -1 && left > widthScreen) {
-                    newPosition = position + 1;
-                    setCount(1);
-                } else if (count === 1 && offsetReview < 0) {
-                    newPosition = position - 1;
-                    setCount(-1);
-                }
-                setPosition(newPosition);
-            }, 7500);
+    //             if (count === -1 && left > widthScreen) {
+    //                 newPosition = position + 1;
+    //                 setCount(1);
+    //             } else if (count === 1 && offsetReview < 0) {
+    //                 newPosition = position - 1;
+    //                 setCount(-1);
+    //             }
+    //             setPosition(newPosition);
+    //         }, 7500);
 
-            return () => clearInterval(interval);
-        }
-    });
+    //         return () => clearInterval(interval);
+    //     }
+    // });
 
     return (
         <ReviewsContainer id="reviews">
