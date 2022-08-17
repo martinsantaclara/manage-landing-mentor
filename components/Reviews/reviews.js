@@ -98,7 +98,7 @@ const Reviews = ({ mobile, widthScreen }) => {
                     ></Image>
                 </BgLeftReviews>
                 <ReviewsTitle mobile={mobile}>What they’ve said</ReviewsTitle>
-                <ItemsReviewStyle
+                {/* <ItemsReviewStyle
                     mobile={mobile}
                     widthScreen={widthScreen}
                     position={position}
@@ -138,7 +138,7 @@ const Reviews = ({ mobile, widthScreen }) => {
                             ></ReviewBtn>
                         ))}
                     </ReviewBtns>
-                )}
+                )} */}
                 <Button
                     align={'center'}
                     margin={mobile ? '1.25rem 0' : '3rem 0 0'}
