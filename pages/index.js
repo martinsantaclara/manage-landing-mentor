@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import BgUpperCorner from '../components/BgUpperCorner/bgUpperCorner';
 import Header from '../components/Header/header';
 import Hero from '../components/Hero/hero';
-import Reviews from '../components/reviews/reviews';
+// import Reviews from '../components/reviews/reviews';
 import Simplify from '../components/Simplify/simplify';
 
 const useWidth = () => {
