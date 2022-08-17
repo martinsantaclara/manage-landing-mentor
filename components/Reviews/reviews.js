@@ -87,7 +87,7 @@ const Reviews = ({ mobile, widthScreen }) => {
                 direction={'column'}
                 width={'100%'}
                 align={''}
-                reviews
+                reviewsParam
             >
                 <BgLeftReviews widthScreen={widthScreen} aria-hidden="true">
                     <Image
